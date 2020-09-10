@@ -1,12 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <title>Issue Tracker</title>
 </head>
-<body>
+
+<body onload="fetchIssues()">
+  <div class="container">
+    <h1>JS Issue Tracker
+      <h6>Trening project by Ilja Plakhin(<a style="text-decoration: none;" href="https://codingthesmartway.com/"> CodingTheSmartWay.com &copy;</a>)</h6>
+    </h1>
+    <div class="jumbotron">
+      <h3>Add New Issue</h3>
+      <form action="" id="issueInputForm">
+        <div class="form-group">
+          <lable for="issueDescInput">Description</lable>
+          <input type="text" class="form-control form-control-sm" id="issueDescInput" placeholder="Describe the issue ...">
+        </div>
+        <div class="form-group">
+          <lable for="issueSeverityInput">Severity</lable>
+          <select class="form-control form-control-sm" id="issueSeverityInput" name="">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <lable for="issueAssignedToInput">Assigned</lable>
+          <input type="text" class="form-control form-control-sm" id="issueAssignedToInput" placeholder="Enter responsible ...">
+        </div>
+        <button type="submit" class="btn btn-primary" name="Add">Add</button>
+      </form>
+      </div>
+      <div class="col-lg-12">
+        <div id="issuesList">
+
+        </div>
+        <div class="footer"><p><a style="text-decoration: none;" href="https://codingthesmartway.com/"> CodingTheSmartWay.com &copy;</a></p></div>
+      </div>
+  </div>
+  <!-- Load Chance -->
+  <script type="text/javascript" src="https://chancejs.com/chance.min.js">
+  </script>
+
+  <!-- Load Jquery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <!-- Load popper -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <!-- Load Bootstrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <!-- native script -->
+  <script src="./main.js" charset="utf-8"></script>
 
 </body>
+
 </html>
